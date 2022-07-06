@@ -1,0 +1,6 @@
+require("core.opt")
+require("core.plug")
+require("core.nord")
+require("core.treesitter")
+require("core.statusbar")
+require("core.tabbar")

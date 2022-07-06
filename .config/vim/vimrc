@@ -1,0 +1,66 @@
+set history=500
+set number
+syntax on
+
+filetype plugin on
+filetype indent on
+
+set autoread
+au FocusGained,BufEnter * checktime
+
+let mapleader = ";"
+
+nmap <leader>w :w!<cr>
+
+command! W execute 'w !sudo tee % > /dev/null' <bar> edit!
+
+set so=7
+
+let $LANG='en'
+set langmenu=en
+
+set wildmenu
+
+set wildignore=".o",*~,*.pyc
+if has("win16") || has("win32")
+	set wildignore+=.git\*,.hg\*,.svn\*
+else
+	set wildignore+=*/.git/*,*/.hg/*,*/.svn/*,*/.DS_Store
+endif
+
+set laststatus=2
+
+set ruler
+
+set cmdheight=1
+
+set hid
+
+set backspace=eol,start,indent
+set whichwrap+=<,>,h,l
+
+set ignorecase
+set smartcase
+set nohlsearch
+set incsearch
+set lazyredraw
+set magic
+set noerrorbells
+set novisualbell
+set t_vb=
+set tm=500
+
+set nobackup
+set nowb
+set noswapfile
+
+set expandtab
+set smarttab
+set shiftwidth=2
+set tabstop=2
+
+set lbr
+set tw=500
+set ai
+set si
+set wrap

@@ -1,0 +1,28 @@
+set preview true
+set hidden true
+set drawbox true
+set icons true
+set ignorecase true
+
+cmd open ${{
+    case $(file --mime-type "$f" -bL) in
+        text/*|application/json) $EDITOR "$f";;
+        video/*|image/*/application/pdf) xdg-open "$f" & disown;;
+        *) xdg-open "$f"
+    esac
+}}
+
+cmd mkdir ${{
+    printf "Directory Name: "
+    read ans
+    mkdir $ans
+}}
+
+cmd touch ${{
+    printf "File Name: "
+    read ans
+    $EDITOR $ans
+}}
+
+map d
+map d delete
