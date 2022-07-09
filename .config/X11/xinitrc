@@ -1,4 +1,7 @@
 pipewire &
 wireplumber &
 pipewire-pulse &
+picom &
+nitrogen --restore &
 exec dbus-launch xmonad
+

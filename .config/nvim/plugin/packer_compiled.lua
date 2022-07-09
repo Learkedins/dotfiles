@@ -74,6 +74,11 @@ _G.packer_plugins = {
     path = "/home/pooh/.local/share/nvim/site/pack/packer/start/bufferline.nvim",
     url = "https://github.com/akinsho/bufferline.nvim"
   },
+  ["fzf.vim"] = {
+    loaded = true,
+    path = "/home/pooh/.local/share/nvim/site/pack/packer/start/fzf.vim",
+    url = "https://github.com/junegunn/fzf.vim"
+  },
   ["lualine.nvim"] = {
     loaded = true,
     path = "/home/pooh/.local/share/nvim/site/pack/packer/start/lualine.nvim",

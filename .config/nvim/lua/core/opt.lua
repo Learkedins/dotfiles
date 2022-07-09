@@ -10,9 +10,25 @@ local options = {
     cul = true,
     wrap = false,
     hlsearch = false,
-    guicursor = "",
 }
 
+-- For loop to simplify options
 for k,v in pairs(options) do
     vim.opt[k] = v
 end
+
+-- Jump to last cursor position
+vim.cmd[[autocmd BufReadPost * if @% !~# '\.git[\/\\]COMMIT_EDITMSG$' && line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g`\"" | endif ]]
+
+-- Transparency
+vim.cmd[[highlight Normal guibg=NONE ctermbg=NONE]]
+
+-- Try catch for colorscheme vim
+vim.cmd [[
+try
+  colorscheme NeoSolarized
+catch /^Vim\%((\a\+)\)\=:E185/
+  colorscheme default
+  set background=dark
+endtry
+]]

@@ -26,6 +26,7 @@ return packer.startup({function(use)
     use "nvim-lualine/lualine.nvim"
     use "akinsho/bufferline.nvim"
     use "kyazdani42/nvim-web-devicons"
+    use "junegunn/fzf.vim"
 end,
 config = {
     display = {

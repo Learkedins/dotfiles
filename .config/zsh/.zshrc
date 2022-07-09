@@ -21,4 +21,10 @@ zmodload zsh/complist
 compinit
 _comp_options+=(globdots)
 
+_fix_cursors() {
+    echo -ne '\e[5 q'
+}
+
+precmd_functions+=(_fix_cursors)
+
 
