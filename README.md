@@ -2,5 +2,5 @@
 
 __My Personal dotfiles for my artixbox__
 
-** Configuration list **
+_Configuration List_
 - Neovim 
