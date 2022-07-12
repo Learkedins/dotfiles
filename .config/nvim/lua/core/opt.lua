@@ -20,9 +20,6 @@ end
 -- Jump to last cursor position
 vim.cmd[[autocmd BufReadPost * if @% !~# '\.git[\/\\]COMMIT_EDITMSG$' && line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g`\"" | endif ]]
 
--- Transparency
-vim.cmd[[highlight Normal guibg=NONE ctermbg=NONE]]
-
 -- Try catch for colorscheme vim
 vim.cmd [[
 try
@@ -32,3 +29,6 @@ catch /^Vim\%((\a\+)\)\=:E185/
   set background=dark
 endtry
 ]]
+
+-- Transparency
+vim.cmd[[highlight Normal guibg=NONE ctermbg=NONE]]
